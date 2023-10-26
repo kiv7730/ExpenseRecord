@@ -47,7 +47,7 @@ export class ExpenseCmntComponent implements OnInit {
     //   this.expenses.unshift(expense);
     // });
     // const postvalue=;
-    this.http.post('https://localhost:7081/expense', {id:expense.id, description:expense.description, type:expense.type, amount:expense.amount, date:expense.date})
+    this.http.post('https://localhost:7081/expense/ppp', {id:expense.id, description:expense.description, type:expense.type, amount:expense.amount, date:expense.date})
       .subscribe(() => {this.loadExpenses();
         
       }, (error: any) => console.error(error));
@@ -63,6 +63,9 @@ export class ExpenseCmntComponent implements OnInit {
   }
 
 }
+
+
+
 
 
 
